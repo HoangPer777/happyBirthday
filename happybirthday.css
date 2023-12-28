@@ -3,42 +3,12 @@ canvas {
 	top: 0;
 	left: 0;
 }
-p {
-	margin: 0 0;
-	position: absolute;
-	font: 16px Verdana;
-	color: #eee;
-	height: 25px;
-	top: calc( 100vh - 30px );
-	text-shadow: 0 0 2px white;
-}
-p a {
-	text-decoration: none;
-	color: #aaa;
-}
-span {
-	font-size: 11px;
-}
-p > a:first-of-type {
-	font-size: 20px;
-}
 body {
-	overflow: hidden;
-}
+	margin: 0;
+	background: #020202;
+	cursor: grab;
+  }
 
-.name{
-	position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: cursive;
-    font-size: 3em;
-    font-weight: 600;
-    color: #ff6b81e9;
-    -webkit-user-select: none;
-    user-select: none;
-	z-index: 1;
-}
 
 h6 {
     position: absolute;
@@ -872,3 +842,38 @@ body {
   .screen__2 {
 	z-index: 1;
   }
+  @keyframes background {
+	from {
+	  background-position: 0 0%;
+	}
+	to {
+	  background-position: 0 -200px;
+	}
+  }
+  h1 {
+	text-align: center;
+
+	line-height: 1;
+	
+	background: -webkit-linear-gradient(transparent, transparent), url(http://html5book.ru/wp-content/uploads/2016/08/bubbles.png) repeat;
+	background-size: 200px auto;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: background 10s infinite linear;
+  }
+
+  h1 {
+	opacity: 0.95;
+	position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* font-family: cursive; */
+	font-family: 'Sriracha', cursive;
+    font-size: 3em;
+    font-weight: 700;
+    color: #ff6b81e9;
+    -webkit-user-select: none;
+    user-select: none;
+	z-index: 1;
+}
